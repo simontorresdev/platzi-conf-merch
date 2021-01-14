@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../styles/Information.module.css'
+import Link from 'next/link'
 
 const Information = () => (
   <div className={styles.Information}>
@@ -59,7 +60,11 @@ const Information = () => (
       </div>
       <div className={styles.InformationButtons}>
         <div className={styles.InformationBack}>Regresar</div>
-        <div className={styles.InformationNext}>Pagar</div>
+        <Link href='/payment'>
+          <a>
+            <div className={styles.InformationNext}>Pagar</div>
+          </a>
+        </Link>
       </div>
     </div>
     <div className={styles.InformationSidebar}>

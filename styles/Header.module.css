@@ -20,3 +20,7 @@
   text-decoration: none;
   color: #33b1ff;
 }
+
+.Header i{
+  font-family: "Font Awesome 5 Free";
+}
