@@ -1,12 +1,14 @@
 import React, { useRef, useContext } from 'react'
 import styles from '../styles/Information.module.css'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { AppContext } from '../context/appContext'
 
 const Information = () => {
   const { state, addToBuyer } = useContext(AppContext)
   const form = useRef(null)
   const { cart } = state
+  const router = useRouter()
 
   const handleSubmit = () => {
     const formData = new FormData(form.current)
@@ -22,6 +24,7 @@ const Information = () => {
       phone: formData.get('phone')
     }
     addToBuyer(buyer)
+    router.push('/payment')
   }
 
   return (
